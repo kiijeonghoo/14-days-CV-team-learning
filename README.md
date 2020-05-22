@@ -18,9 +18,13 @@
 - 评测指标：Score = 编码识别正确的数量 / 测试集图片数量
 - 解题思路：**定长字符识别 (全部填充至最长字符)** / 不定长字符识别 / 先检测再识别
 
-### Task02 - [数据读取与数据扩增](/nbs/Task02-数据读取与数据扩增.ipynb)
+### Task02 - [数据读取与数据扩增](/nbs/Task02-数据读取与数据扩增.ipynb) 🎈
 
-
+- 图像读取：**Pillow (与 notebook 无缝集成)** / OpenCV (功能更强大)
+- 数据扩增：为什么有用？(模型参数多，训练样本少) / 数据扩增方法 (颜色空间、尺度空间、样本空间) / 不同任务的数据扩增有相应区别，如本任务不能进行翻转操作 (6 和 9)
+- 常用数据扩增库：**torchvision (与 torch 集成)** / imgaug / albumentations
+- `torchvision.transforms`数据扩增方法：Resize / ColorJitter / RandomRotation / Normalize / ToTensor 等
+- Pytorch读取数据：`Dataset`进行封装 / `DataLoader`并行读取 / 读取的数据格式 - 图像 (batchsize * chanel * height * wigth)，标签 (batchsize * max_len)
 
 ## 参考资料
 
