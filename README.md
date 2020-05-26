@@ -40,6 +40,13 @@
 - 模型训练：大循环 epoch → 小循环 batch → 前向传播 → 计算 loss → 梯度清零 → 反向传播 → 更新参数
 - 使用预训练模型：ImageNet数据集上的预训练模型 / `torchvision.models.resnet18(pretrained=True)` 
 
+## 直播和答疑
+
+- 第一次直播：[比赛介绍和baseline](https://tianchi.aliyun.com/course/video?liveId=41167) ([PPT](/PPT/天池直播-1_比赛介绍和baseline.pdf))
+- 第二次直播：[图像数据读取，数据扩增方法和图像识别模型介绍](https://tianchi.aliyun.com/course/live?spm=5176.12586971.1001.1.11be6956fkKgJ8&liveId=41168) (PPT)
+- 第三次直播：
+- 答疑汇总：https://shimo.im/docs/5zAZVYlY4RF5FgAo
+
 ## 参考资料
 
 Datawhale开源学习资料：https://github.com/datawhalechina/team-learning 
