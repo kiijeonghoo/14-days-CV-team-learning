@@ -10,6 +10,12 @@
 
 详细的个人笔记和注解见[notebook](/nbs/)中批注，以下是每个task的总结 👇
 
+### Task01 - [Baseline](/nbs/Task00-Baseline.ipynb) 🎈
+
+- 基本思路：CNN 定长字符识别 / 数据读取 (Dataset 和 DataLoder) → 模型构建 (ResNet18) → 训练验证 → 结果预测
+- 实验：15个epoch (成绩 0.57) / 
+- 如何提高精度：增加 epoch / 其他数据扩增方法 (模糊、像素噪音等) / 多折预测结果集成 / 其他模型 / 修改损失函数 / 增加字数预测模型对结果修正
+
 ### Task01 - [赛题理解](/nbs/Task01-赛题理解.ipynb) 🎈
 
 - 赛题任务：街道字符识别 / CV
@@ -25,6 +31,14 @@
 - 常用数据扩增库：**torchvision (与 torch 集成)** / imgaug / albumentations
 - `torchvision.transforms`数据扩增方法：Resize / ColorJitter / RandomRotation / Normalize / ToTensor 等
 - Pytorch读取数据：`Dataset`进行封装 / `DataLoader`并行读取 / 读取的数据格式 - 图像 (batchsize * chanel * height * wigth)，标签 (batchsize * max_len)
+
+### Task03 - [字符识别模型](/nbs/Task03-字符识别模型.ipynb) 🎈
+
+- CNN：一类模型 / CV领域常用 / 卷积操作的原理 / 一般由卷积 (convolution)、池化 (pooling)、非线性激活函数 (non-linear activation function)、全连接层 (fully connected layer) 构成 / 端到端 (End to End)
+- CNN的发展：LeNet (1998) / AlexNet (2012) / VGG (2014) / Inception (2014) / ResNet (2015)
+- pytorch中定义模型：继承`nn.Module` / 定义模型参数 / 定义`forward`函数
+- 模型训练：大循环 epoch → 小循环 batch → 前向传播 → 计算 loss → 梯度清零 → 反向传播 → 更新参数
+- 使用预训练模型：ImageNet数据集上的预训练模型 / `torchvision.models.resnet18(pretrained=True)` 
 
 ## 参考资料
 
