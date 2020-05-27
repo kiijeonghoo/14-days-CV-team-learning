@@ -29,8 +29,14 @@
 - 图像读取：**Pillow (与 notebook 无缝集成)** / OpenCV (功能更强大) / matplotlib.image / scipy.misc / skimage
 - Pytorch读取数据：常用数据集 `torchvision.datasets.CIFAR10(...)` / 自定义数据集用`Dataset`进行封装 (实现 `_getitem_` 和 `_len_  `方法)， `DataLoader`批量读取 / 读取的数据格式 - 图像 (batchsize * chanel * height * wigth)，标签 (batchsize * max_len)
 - 数据扩增：为什么有用？(模型参数多，训练样本少) / 不同任务的数据扩增有相应区别，如本任务不能进行翻转操作 (6 和 9)
+<<<<<<< HEAD
   > 基于图像处理的数据扩增方法:
   >
+=======
+
+  > 基于图像处理的数据扩增方法:
+  > 
+>>>>>>> d8dbdc2dbc84becadbd031f5f19e634530d67f7d
   > - 几何变换：旋转 / 缩放 / 翻转 / 裁剪 / 平移 / 仿射变换
   > - 灰度和彩色空间变换：亮度调整 / 对比度、饱和度调整 / 颜色空间转换 / 色彩调整
   > - 添加噪声和滤波：注入高斯噪声、椒盐噪声 / 滤波 - 模糊、锐化等
