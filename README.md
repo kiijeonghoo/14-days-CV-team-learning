@@ -27,8 +27,11 @@
 ### Task02 - [数据读取与数据扩增](/nbs/Task02-数据读取与数据扩增.ipynb) 🎈
 
 - 图像读取：**Pillow (与 notebook 无缝集成)** / OpenCV (功能更强大) / matplotlib.image / scipy.misc / skimage
+
 - Pytorch读取数据：常用数据集 `torchvision.datasets.CIFAR10(...)` / 自定义数据集用`Dataset`进行封装 (实现 `_getitem_` 和 `_len_  `方法)， `DataLoader`批量读取 / 读取的数据格式 - 图像 (batchsize * chanel * height * wigth)，标签 (batchsize * max_len)
+
 - 数据扩增：为什么有用？(模型参数多，训练样本少) / 不同任务的数据扩增有相应区别，如本任务不能进行翻转操作 (6 和 9)
+  
   > 基于图像处理的数据扩增方法:
   >
   > - 几何变换：旋转 / 缩放 / 翻转 / 裁剪 / 平移 / 仿射变换
@@ -38,7 +41,9 @@
   > - 随机擦除
   > 
   > 基于深度学习的数据扩增方法：GAN数据增强 / 神经风格转换 / AutoAugment
+  
 - 常用数据扩增库：**torchvision (与 torch 集成)** / imgaug / albumentations
+
 - `torchvision.transforms`数据扩增方法：Resize / ColorJitter / RandomRotation / Normalize / ToTensor 等，具体见 [PPT](/PPT/天池直播-2_数据读取和数据扩增.pdf)
 
 ### Task03 - [字符识别模型](/nbs/Task03-字符识别模型.ipynb) 🎈
@@ -66,6 +71,14 @@
 - 模型保存加载：`torch.save(model_object.state_dict(),'model.pt')` / `model.load_state_dict(torch.load(' model.pt'))`
 - 本任务推荐的提升模型效果流程：构建简单CNN模型，跑通训练、验证和预测流程 → 增加模型复杂度 → 增加数据扩增方法
 
+### Task05 - [模型集成](/nbs/Task05-模型集成.ipynb) 🎈
+
+- 集成学习方法：Stacking / Bagging / Boosting （如10折交叉验证，可训练10个CNN模型，对结果进行平均或投票）
+- 深度学习中的集成学习：
+  - **Dropout**：在每个**训练**批次中，随机让一部分的节点停止工作，在**预测**的过程中让所有的节点都其作用。可以有效缓解过拟合。
+  - **TTA**：测试集数据扩增，可以同样在预测时候进行数据扩增，对同一个样本预测n次，然后对n次结果进行平均。
+  - **Snapshot**：单个模型上，对不同精度较好的checkpoint集成
+- 结果后处理：统计图片中每个位置字符出现频率，用规则修正 / 训练字符长度预测模型，修正结果
 ## 直播和答疑
 
 - 第一次直播：[比赛介绍和baseline](https://tianchi.aliyun.com/course/video?liveId=41167) ([PPT](/PPT/天池直播-1_比赛介绍和baseline.pdf))
