@@ -6,6 +6,10 @@
 
 **Star⭐ me if you find useful🤣**
 
+## 结营证书 🎓
+
+<img src="优秀学习者证书.jpg" style="zoom:10%;" />
+
 ## 学习内容与进度 📙
 
 详细的个人笔记和注解见[notebook](/nbs/)中批注，以下是每个task的总结 👇
@@ -83,7 +87,7 @@
 
 - 第一次直播：[比赛介绍和baseline](https://tianchi.aliyun.com/course/video?liveId=41167) ([PPT](/PPT/天池直播-1_比赛介绍和baseline.pdf))
 - 第二次直播：[图像数据读取，数据扩增方法和图像识别模型介绍](https://tianchi.aliyun.com/course/live?spm=5176.12586971.1001.1.11be6956fkKgJ8&liveId=41168) ([PPT1](/PPT/天池直播-2_数据读取和数据扩增.pdf)，[PPT2](/PPT/天池直播-2_分类模型介绍.pdf))
-- 第三次直播：
+- 第三次直播：[训练调参与模型集成](https://tianchi.aliyun.com/course/video?liveId=41169) ([PPT](/PPT/天池直播-4_训练调参与模型集成.pdf))
 - 答疑汇总：https://shimo.im/docs/5zAZVYlY4RF5FgAo
 
 ## 参考资料
